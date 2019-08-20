@@ -1,13 +1,399 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>DemoApp</title>
-  <base href="https://179211.github.io/DemoAngular/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.3ff695c00d717f2d2a11.css"></head>
-<body>
-  <app-root></app-root>
-<script src="runtime-es2015.5bc68c0dd8cf137fbe82.js" type="module"></script><script src="polyfills-es2015.5cb1e996b2a376ba4548.js" type="module"></script><script src="runtime-es5.ee0aae13fb762b150814.js" nomodule defer></script><script src="polyfills-es5.bc4338089e9339f65fd1.js" nomodule defer></script><script src="main-es2015.28d73479a1e722db1d0c.js" type="module"></script><script src="main-es5.a42e8e12449b852b773d.js" nomodule defer></script></body>
-</html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./Plugins/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="./Plugins/jquery-3.4.1.min.js" ></script>
+    <script type="text/javascript" src="./Plugins/popper.min.js" ></script>
+    <script type="text/javascript" src="./Plugins/bootstrap-4.3.1-dist/js/bootstrap.min.js" ></script>
+    <script src="https://kit.fontawesome.com/72cae449e1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Rammetto+One&display=swap" rel="stylesheet">
+
+
+    <title>Hello, world!</title>
+
+    <style>
+		body{
+			background: #f7f7f7;
+		}
+		.AnchorNavLink{
+			padding-top: 55px; margin-top: -55px;
+		}
+		#wrapper{
+			position: relative;
+			top: 0;
+			min-height: 100vh;
+		}
+		#Layout_brand{
+			padding: 0 15px;
+		}
+		#Layout_brand > .navbar-brand{
+			min-width: 200px;
+			/* background: #354052;
+			color: #f8f9fa; */
+		}
+		#Layout_brand > .navbar-brand i{
+			margin:0 10px 0 0;
+		}
+		#Layout_brand > .navbar-brand i:after{
+			content: "";
+			position: absolute;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 10px solid #4e4e4e;
+			border-bottom: 10px solid #e1e1e1;
+			bottom: -4px;
+			left: 25px;
+			transform: translate(-50%);
+		}
+
+		#wrapper .MySideBar{
+			transition: all 0.6s ease;
+			overflow: hidden;
+			position: fixed;
+			background: #4e4e4e;
+			background: #e1e1e1;
+			width: 230px;
+			top: 40px;
+			bottom: 0px;
+			z-index: 1030;
+		}
+
+		
+		#wrapper .MySideBar .nav-link{
+			white-space: nowrap;
+		}
+		
+		#wrapper .MySideBar .nav-link.active{
+			border-radius:0px;
+		}
+		#wrapper .MySideBar .nav-link:hover{
+			font-weight:bold;
+		}
+
+		#wrapper .MySideBar .nav-link i{
+			line-height: 25px;
+		}
+		#wrapper .MySideBar .nav-link span{
+			transition-property: transform, opacity, margin-left;
+			transition-duration: 0.5s;
+			transition-timing-function: ease;
+			white-space: nowrap;
+			margin-left: 10px;
+			display: inline-block; 
+		}
+
+		#wrapper .MyMainContent{
+			transition: padding-left 0.6s ease;
+			min-height: 100%;
+			padding: 30px 15px 15px 230px;
+		}
+    </style>
+	<style>
+		/* LG, XL */
+		@media (min-width: 992px){
+			div#navbarMySideBar {
+				position: fixed;
+				top: 0;
+				left: 0px;
+			}
+			
+			#wrapper.MiniSideBar .MySideBar{
+				width:50px;
+			}
+			#wrapper.MiniSideBar .MySideBar .nav-link span{
+				opacity: 0;
+				margin-left: -15px;
+			}
+			#wrapper.MiniSideBar .MySideBar:hover{
+				width:230px;
+			}
+			#wrapper.MiniSideBar .MySideBar:hover .nav-link span{
+				opacity: 1;
+				transform: translate3d(25px,0,0);
+			}
+			#wrapper.MiniSideBar .MyMainContent{
+				padding-left: 50px;
+			}
+			
+		}
+	
+		/* XS, SM, MD */
+		@media (max-width: 991.98px) { 
+
+			#Layout_brand > .navbar-brand i:after{
+				display:none;
+			}
+			#Layout_brand > .navbar-brand{
+				margin:0px;
+				text-align:center;
+			}
+			#wrapper .MySideBar{
+				transition: all 0.6s ease;
+				overflow: hidden;
+				position: initial; 
+				background: #4e4e4e;
+				background: #e1e1e1;
+				width: 100%; 
+				top: 50px;
+				/* bottom: 0px; */
+				z-index: 1030;
+				left: 0px;
+				right: 0px;
+			}
+			#wrapper.MiniSideBar .MySideBar {
+				width: 100%;
+			}
+			#wrapper .MyMainContent{
+				padding: 16px 0px 15px 0px;
+			}
+		}
+	
+	</style>
+    <style>
+		.DivWelcome{
+			text-align:center;
+			/* background: rgb(77,64,226); */
+			/* background: linear-gradient(0deg, rgba(77,64,226,0.38699229691876746) 0%, rgba(77,64,226,1) 100%); */
+			background: #f7f7f7;
+		}
+
+		.DivWelcome > .WelcomeHeading{
+			font-size: 9vw;
+			font-family: 'Rammetto One', cursive;
+			/* color: #fbfbfb12; */
+			color: white;
+			text-shadow: 2px 2px 4px #000000;
+			line-height: 9vw;
+		}
+		.DivWelcome > .WelcomeSubHeading{
+			font-size: 3vw;
+			font-family: 'Fredericka the Great', cursive;
+			margin-top: -1.5vw;
+		}
+    </style>	
+	
+	<script>
+		function MiniSideBarToggler(e){
+			$("#wrapper").toggleClass("MiniSideBar");
+			console.log(e);
+		}
+	</script>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example2" data-offset="20">
+https://themes.getbootstrap.com/preview/?theme_id=8214&show_new=
+  <div id="wrapper" class="" >
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="Layout_brand">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMySideBar" aria-controls="navbarMySideBar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+
+          <a class="navbar-brand" id="xxx" href="#" >
+              <i class="fa fa-list-ul d-none d-lg-inline-block" onClick="MiniSideBarToggler(this)" ></i> Tushar Fulmali
+          </a>
+        
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <span class="navbar-text">
+                Hi, <b>Pirate</b> &nbsp;
+              </span>
+              <img src="./images/dp-pirate.png" alt="DP" class="rounded-circle" width="30" height="30"  />
+            </form>
+          </div>
+		  
+          <div class="collapse navbar-collapse" id="navbarMySideBar">
+			<div class="MySideBar" >
+				<ul class="nav nav-pills flex-column" id="navbar-example2" >
+					<li class="nav-item">
+					  <a class="nav-link" href="#Navbar1">
+						  <i class="fa fa-home"></i>
+						  <span>Navbar 1</span>
+					  </a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#Navbar2">
+						  <i class="fa fa-home"></i>
+						  <span>Navbar 2</span>
+					  </a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#Navbar3">
+						  <i class="fa fa-home"></i>
+						  <span>Navbar 3</span>
+					  </a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#Navbar4">
+						  <i class="fa fa-home"></i>
+						  <span>Navbar 4</span>
+					  </a>
+					</li>
+				  </ul>
+			</div>
+		  </div>
+		  
+        </nav>
+        
+
+        <div class="MySideBar d-none" >
+            <ul class="nav nav-pills flex-column" id="navbar-example2" >
+                <li class="nav-item">
+                  <a class="nav-link" href="#Navbar1">
+                      <i class="fa fa-home"></i>
+                      <span>Navbar 1</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Navbar2">
+                      <i class="fa fa-home"></i>
+                      <span>Navbar 2</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Navbar3">
+                      <i class="fa fa-home"></i>
+                      <span>Navbar 3</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Navbar4">
+                      <i class="fa fa-home"></i>
+                      <span>Navbar 4</span>
+                  </a>
+                </li>
+              </ul>
+        </div>
+        
+		<div class="MyMainContent" >
+
+
+          <div class="container-fluid" >
+		  
+            <div class="row">
+<div class="col-md-12">
+                    <h1 id="Navbar1" class="AnchorNavLink bd-title" >Navbar 1</h1>
+
+
+<div class="DivWelcome">
+    <div class="WelcomeHeading">
+      WELCOME
+    </div>
+    <div class="WelcomeSubHeading">
+    So glad you're here
+    </div>
+    
+  </div>
+  
+</div>
+
+              <div class="col-md">
+                <div  >
+                    <h1 class="bd-title" id="content">Navbar</h1>
+                    <p class="bd-lead">Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.</p>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <h1 id="Navbar2" class="AnchorNavLink bd-title" >Navbar 2</h1>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <h1 id="Navbar3" class="AnchorNavLink bd-title" >Navbar 3</h1>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <h1 id="Navbar4" class="AnchorNavLink bd-title" id="Navbar4">Navbar 4</h1>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="container-fluid d-none" style="margin-top:56px;">
+        
+        <!--The content below is only a placeholder and can be replaced.-->
+        <div class="text-center" style="height:1000px;">
+          <h1>
+            Welcome!
+          </h1>
+          <h3>
+            So glad you're here..
+          </h3>
+        
+          <img class="" width="300" alt="Angular Logo" src="assets/images/dp.png">
+        </div>
+        
+        
+            <div class="row">
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="w-100"></div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+          </div>
+        <div class="row">
+            <div class="col-sm">
+              One of three columns
+            </div>
+            <div class="col-sm">
+              One of three columns
+            </div>
+            <div class="col-sm">
+              One of three columns
+            </div>
+          </div>
+        
+        
+          IMG   text-indent: -9999px;
+        
+        
+        sticky-top
+        navbar-dark bg-dark 
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        
+          <router-outlet></router-outlet>
+        
+        </div>
+        
+  </div>
+
+    <div style="position:fixed; bottom:0px; right:0px; border:2px solid red; font-weight: bold; width:35px; text-align: center;">
+        <span class="d-block d-sm-none">XS</span>
+        <span class="d-none d-sm-block d-md-none">SM</span>
+        <span class="d-none d-md-block d-lg-none">MD</span>
+        <span class="d-none d-lg-block d-xl-none">LG</span>
+        <span class="d-none d-xl-block">XL</span>
+    </div>
+</body>
