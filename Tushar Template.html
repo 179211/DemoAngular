@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./Plugins/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="./Plugins/jquery-3.4.1.min.js" ></script>
+    <script type="text/javascript" src="./Plugins/popper.min.js" ></script>
+    <script type="text/javascript" src="./Plugins/popper.min.js" ></script>
+    <script type="text/javascript" src="./Plugins/bootstrap-4.3.1-dist/js/bootstrap.min.js" ></script>
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <div style="position:fixed; bottom:0px; right:0px; border:2px solid red; font-weight: bold; width:35px; text-align: center;">
+        <span class="d-block d-sm-none">XS</span>
+        <span class="d-none d-sm-block d-md-none">SM</span>
+        <span class="d-none d-md-block d-lg-none">MD</span>
+        <span class="d-none d-lg-block d-xl-none">LG</span>
+        <span class="d-none d-xl-block">XL</span>
+    </div>
+
+
+<style>
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+}
+
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+}
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { }
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+}
+/* 
+Extra large devices (large desktops)
+No media query since the extra-large breakpoint has no upper bound on its width 
+*/
+
+	body{
+		background:#343a40;
+	}
+
+</style>
+
+    <style>
+    .SidebarToggle
+    {
+        cursor: pointer;
+        outline: none;
+        width: 54px;
+        height: 40px;
+        padding: 7px 14px;
+        background-color: #343a40;
+        border-radius: 5px;
+		border:1px solid #9a9da0;
+    }
+
+    .SidebarToggle > span{
+        position: relative;
+        display: block;
+        height: 2px;
+        border-radius: 2px;
+        background: #9a9da0;            
+        margin-bottom: 10px;
+        transition:all 0.6s cubic-bezier(.65,-0.31,.37,1.43);
+        transform-origin: left;
+    }
+    .SidebarToggle > .SidebarToggle-bar1{
+        margin-top: -1px;
+        transform: rotate(45deg);
+        width: 34px;
+    }
+    .SidebarToggle > .SidebarToggle-bar2{
+        width:0px;
+    }
+    .SidebarToggle > .SidebarToggle-bar3{
+        transform: rotate(-45deg);
+        width: 34px;
+    }
+
+    .SidebarToggle.collapsed > .SidebarToggle-bar1{
+        transform: rotate(0deg);
+        width:100%;
+    }
+    .SidebarToggle.collapsed > .SidebarToggle-bar2{
+        width:100%;
+    }
+    .SidebarToggle.collapsed > .SidebarToggle-bar3{
+        transform: rotate(-0deg);
+        width:100%;
+    }
+
+
+    </style>
+<br/>
+<div class="container">
+    <div class="SidebarToggle collapsed" onClick="SidebarToggleBtnClick(this)" >
+        <span class="SidebarToggle-bar1"></span>
+        <span class="SidebarToggle-bar2"></span>
+        <span class="SidebarToggle-bar3"></span>
+    </div>
+</div>
+
+<script>
+	function SidebarToggleBtnClick(e){
+		$(e).toggleClass("collapsed");
+	}
+</script>
+
+
+----------------------------------------
+
+
+    <style>
+
+    .SidebarToggleV2
+    {
+    cursor: pointer;
+    outline: none;
+    width: 50px;
+    /* height: 40px; */
+    padding: 5.5px 15.5px;
+    background-color: black;
+    border-radius: 0.25rem;
+    /* border: 1px solid #9a9da0; */
+    }
+
+    .SidebarToggleV2 > span{
+        position: relative;
+        display: block;
+        height: 2px;
+        border-radius: 2px;
+        background: #9a9da0;            
+        margin-bottom: 7px;
+        transition:all 0.6s cubic-bezier(.65,-0.31,.37,1.43);
+        transform-origin: left;
+    }
+    .SidebarToggleV2 > .SidebarToggleV2-bar1{
+        margin-top: -1px;
+        transform: rotate(45deg);
+        width: 26px;
+    }
+    .SidebarToggleV2 > .SidebarToggleV2-bar2{
+        width:0px;
+    }
+    .SidebarToggleV2 > .SidebarToggleV2-bar3{
+        transform: rotate(-45deg);
+        width: 26px;
+		margin-bottom: 0px;
+    }
+
+    .SidebarToggleV2.collapsed > .SidebarToggleV2-bar1{
+        transform: rotate(0deg);
+        width:100%;
+    }
+    .SidebarToggleV2.collapsed > .SidebarToggleV2-bar2{
+        width:100%;
+    }
+    .SidebarToggleV2.collapsed > .SidebarToggleV2-bar3{
+        transform: rotate(-0deg);
+        width:100%;
+    }
+
+
+    </style>
+<br/>
+<div class="container">
+    <div class="SidebarToggleV2 collapsed" onClick="SidebarToggleV2BtnClick(this)" >
+        <span class="SidebarToggleV2-bar1"></span>
+        <span class="SidebarToggleV2-bar2"></span>
+        <span class="SidebarToggleV2-bar3"></span>
+    </div>
+</div>
+
+<script>
+	function SidebarToggleV2BtnClick(e){
+		$(e).toggleClass("collapsed");
+	}
+</script>
+
+
+----------------------------------------
+	<style>
+		@keyframes OC_bar1 {
+			0% {
+				top: 0;
+				transform: rotate(0deg);
+			}
+			45% {
+				top: 8px;
+				transform: rotate(145deg);
+			}
+			75% {
+				transform: rotate(130deg);
+			}
+			100% {
+				top: 8px;
+				transform: rotate(135deg);
+			}
+		}
+		@keyframes OC_bar3{
+			0% {
+				bottom: 0;
+				transform: rotate(0deg);
+			}
+			45% {
+				bottom: 8px;
+				transform: rotate(-145deg);
+			}
+			75% {
+				transform: rotate(-130deg);
+			}
+			100% {
+				bottom: 8px;
+				transform: rotate(-135deg);
+			}        
+		}
+		@keyframes CO_bar1 {
+			0% {
+				top: 8px;
+				transform: rotate(135deg);
+			}
+			45% {
+				transform: rotate(-10deg);
+			}
+			75% {
+				transform: rotate(5deg);
+			}
+			100% {
+				top: 0;
+				transform: rotate(0);
+			}
+		}
+		@keyframes CO_bar3{
+			0% {
+				bottom: 8px;
+				transform: rotate(-135deg);
+			}
+			45% {
+				transform: rotate(10deg);
+			}
+			75% {
+				transform: rotate(-5deg);
+			}
+			100% {
+				bottom: 0;
+				transform: rotate(0);
+			}        
+		}
+
+		.SidebarToggleKeyFrame
+		{
+			display: inline-block;
+			cursor: pointer;
+			outline: none;
+			padding: 6.5px 14px;
+			font-size: .99925rem;
+			line-height: 1;
+			background-color: black;
+			border-radius: .25rem;
+		}
+		.SidebarToggleKeyFrame > span{
+			display: block;
+			position: relative;
+			width: 22px;
+			height: 1px;
+			border-radius: 1px;
+			background: #fff;
+			margin-top: 7px;
+		}
+
+		.SidebarToggleKeyFrame > .SidebarToggle-bar1{
+			margin-top: 0px;
+			top: 8px;
+			transform: rotate(135deg);
+            animation: OC_bar1 1s 0s;
+            animation-fill-mode: forwards;
+		}
+		.SidebarToggleKeyFrame > .SidebarToggle-bar2{
+			width: 17px;
+			transition: all 0.5s linear;
+			opacity: 0;
+		}
+		.SidebarToggleKeyFrame > .SidebarToggle-bar3{
+			bottom: 8px;
+			transform: rotate(-135deg);
+            animation: OC_bar3 1s 0s;
+            animation-fill-mode: forwards;
+		}
+		
+		.SidebarToggleKeyFrame.collapsed > .SidebarToggle-bar1{
+			animation: CO_bar1 1s 0s;
+			animation-fill-mode: forwards;
+		}
+		.SidebarToggleKeyFrame.collapsed > .SidebarToggle-bar2{
+			opacity: 1;
+		}
+		.SidebarToggleKeyFrame.collapsed > .SidebarToggle-bar3{
+			animation: CO_bar3 1s 0s;
+			animation-fill-mode: forwards;
+		}
+
+    </style>
+    <br/>
+    <div class="container">
+        <div class="SidebarToggleKeyFrame collapsed" onClick="SidebarToggleKeyFrameBtnClick(this)" >
+            <span class="SidebarToggle-bar1"></span>
+            <span class="SidebarToggle-bar2"></span>
+            <span class="SidebarToggle-bar3"></span>
+        </div>
+        
+    </div>
+
+<script>
+	function SidebarToggleKeyFrameBtnClick(e){
+		$(e).toggleClass("collapsed");
+	}
+</script>
+----------------------------------------
+
+<style>
+    @keyframes OC_bar1 {
+        0% {
+            top: 0;
+            transform: rotate(0deg);
+        }
+        45% {
+            top: 8px;
+            transform: rotate(145deg);
+        }
+        75% {
+            transform: rotate(130deg);
+        }
+        100% {
+            top: 8px;
+            transform: rotate(135deg);
+        }
+    }
+    @keyframes OC_bar3{
+        0% {
+            bottom: 0;
+            transform: rotate(0deg);
+        }
+        45% {
+            bottom: 8px;
+            transform: rotate(-145deg);
+        }
+        75% {
+            transform: rotate(-130deg);
+        }
+        100% {
+            bottom: 8px;
+            transform: rotate(-135deg);
+        }        
+    }
+
+        .SidebarToggle2
+        {
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+            padding: .25rem .75rem;
+    font-size: .99925rem;
+    line-height: 1;
+    background-color: black;
+    border: .0625rem solid black;
+    border-radius: .25rem;
+
+        }
+        .SidebarToggle2 > span{
+            display: block;
+            position: relative;
+            width: 22px;
+            height: 1px;
+            border-radius: 1px;
+            background: #fff;
+            margin-top: 7px;
+        }
+
+        .SidebarToggle2 > .SidebarToggle-bar1{
+            margin-top: 0px;
+            top: 0;
+            transform: rotate(0deg);
+        }
+        .SidebarToggle2 > .SidebarToggle-bar2{
+            width: 17px;
+            transition: width .2s linear;
+            opacity: 1;
+        }
+        .SidebarToggle2 > .SidebarToggle-bar3{
+            bottom: 0;
+            transform: rotate(0deg);
+        }
+        .SidebarToggle2:hover > .SidebarToggle-bar1{
+            animation: OC_bar1 1s 0s;
+            animation-fill-mode: forwards;
+        }
+        .SidebarToggle2:hover > .SidebarToggle-bar2{
+            opacity: 0;
+        }
+        .SidebarToggle2:hover > .SidebarToggle-bar3{
+            animation: OC_bar3 1s 0s;
+            animation-fill-mode: forwards;
+        }
+    </style>
+    <br/>
+    <div class="container">
+        <div class="SidebarToggle2">
+            <span class="SidebarToggle-bar1"></span>
+            <span class="SidebarToggle-bar2"></span>
+            <span class="SidebarToggle-bar3"></span>
+        </div>
+        
+    </div>
+	
+	
+	
+	
+	
+
+    <style>
+            @keyframes CO_bar1 {
+                0% {
+                    top: 8px;
+                    transform: rotate(135deg);
+                }
+                45% {
+                    transform: rotate(-10deg);
+                }
+                75% {
+                    transform: rotate(5deg);
+                }
+                100% {
+                    top: 0;
+                    transform: rotate(0);
+                }
+            }
+        
+            @keyframes CO_bar3{
+                0% {
+                    bottom: 8px;
+                    transform: rotate(-135deg);
+                }
+                45% {
+                    transform: rotate(10deg);
+                }
+                75% {
+                    transform: rotate(-5deg);
+                }
+                100% {
+                    bottom: 0;
+                    transform: rotate(0);
+                }        
+            }
+
+                .SidebarToggle3
+                {
+                    display: inline-block;
+                    cursor: pointer;
+                    outline: none;
+                    padding: .25rem .75rem;
+                    font-size: .99925rem;
+                    line-height: 1;
+                    background-color: black;
+                    border: .0625rem solid black;
+                    border-radius: .25rem;
+                }
+                .SidebarToggle3 > span{
+                    display: block;
+                    position: relative;
+                    width: 22px;
+                    height: 1px;
+                    border-radius: 1px;
+                    background: #fff;
+                    margin-top: 7px;
+                }
+        
+                .SidebarToggle3 > .SidebarToggle-bar1{
+                    margin-top: 0px;
+                    top: 8px;
+                    transform: rotate(135deg);
+                }
+                .SidebarToggle3 > .SidebarToggle-bar2{
+                    width: 17px;
+                    transition: all 0.5s linear;
+                    opacity: 0;
+                }
+                .SidebarToggle3 > .SidebarToggle-bar3{
+                    bottom: 8px;
+                    transform: rotate(-135deg);
+                }
+                .SidebarToggle3:hover > .SidebarToggle-bar1{
+                    animation: CO_bar1 1s 0s;
+                    animation-fill-mode: forwards;
+                }
+                .SidebarToggle3:hover > .SidebarToggle-bar2{
+                    opacity: 1;
+                }
+                .SidebarToggle3:hover > .SidebarToggle-bar3{
+                    animation: CO_bar3 1s 0s;
+                    animation-fill-mode: forwards;
+                }
+                </style>
+            <br/>
+            <div class="container">
+                <div class="SidebarToggle3">
+                    <span class="SidebarToggle-bar1"></span>
+                    <span class="SidebarToggle-bar2"></span>
+                    <span class="SidebarToggle-bar3"></span>
+                </div>
+                
+            </div>
+
+
+
+
+
+<div style="width:80%; border:1px solid red;">
+    <div class="container">
+            ...
+    </div>
+</div>
+<br/>
+<br/>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">A</div>
+        <div class="col">B</div>
+        <div class="col-md-2">C</div>
+    </div>
+</div>
+        
+
+<script>
+$(function(){
+});
+</script>
+    
+
+
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p>As such, the classes are named using the format:</p>
+
+    <ul>
+      <li><code class="highlighter-rouge">.d-{value}</code> for <code class="highlighter-rouge">xs</code></li>
+      <li><code class="highlighter-rouge">.d-{breakpoint}-{value}</code> for <code class="highlighter-rouge">sm</code>, <code class="highlighter-rouge">md</code>, <code class="highlighter-rouge">lg</code>, and <code class="highlighter-rouge">xl</code>.</li>
+    </ul>
+    
+    <p>Where <em>value</em> is one of:</p>
+    
+    <ul>
+      <li><code class="highlighter-rouge">none</code></li>
+      <li><code class="highlighter-rouge">inline</code></li>
+      <li><code class="highlighter-rouge">inline-block</code></li>
+      <li><code class="highlighter-rouge">block</code></li>
+      <li><code class="highlighter-rouge">table</code></li>
+      <li><code class="highlighter-rouge">table-cell</code></li>
+      <li><code class="highlighter-rouge">table-row</code></li>
+      <li><code class="highlighter-rouge">flex</code></li>
+      <li><code class="highlighter-rouge">inline-flex</code></li>
+    </ul>
+    
+    <p>The media queries effect screen widths with the given breakpoint <em>or larger</em>. For example, <code class="highlighter-rouge">.d-lg-none</code> sets <code class="highlighter-rouge">display: none;</code> on both <code class="highlighter-rouge">lg</code> and <code class="highlighter-rouge">xl</code> screens.</p>
+    
+    <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Screen Size</th>
+                <th>Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hidden on all</td>
+                <td><code class="highlighter-rouge">.d-none</code></td>
+              </tr>
+              <tr>
+                <td>Hidden only on xs</td>
+                <td><code class="highlighter-rouge">.d-none .d-sm-block</code></td>
+              </tr>
+              <tr>
+                <td>Hidden only on sm</td>
+                <td><code class="highlighter-rouge">.d-sm-none .d-md-block</code></td>
+              </tr>
+              <tr>
+                <td>Hidden only on md</td>
+                <td><code class="highlighter-rouge">.d-md-none .d-lg-block</code></td>
+              </tr>
+              <tr>
+                <td>Hidden only on lg</td>
+                <td><code class="highlighter-rouge">.d-lg-none .d-xl-block</code></td>
+              </tr>
+              <tr>
+                <td>Hidden only on xl</td>
+                <td><code class="highlighter-rouge">.d-xl-none</code></td>
+              </tr>
+              <tr>
+                <td>Visible on all</td>
+                <td><code class="highlighter-rouge">.d-block</code></td>
+              </tr>
+              <tr>
+                <td>Visible only on xs</td>
+                <td><code class="highlighter-rouge">.d-block .d-sm-none</code></td>
+              </tr>
+              <tr>
+                <td>Visible only on sm</td>
+                <td><code class="highlighter-rouge">.d-none .d-sm-block .d-md-none</code></td>
+              </tr>
+              <tr>
+                <td>Visible only on md</td>
+                <td><code class="highlighter-rouge">.d-none .d-md-block .d-lg-none</code></td>
+              </tr>
+              <tr>
+                <td>Visible only on lg</td>
+                <td><code class="highlighter-rouge">.d-none .d-lg-block .d-xl-none</code></td>
+              </tr>
+              <tr>
+                <td>Visible only on xl</td>
+                <td><code class="highlighter-rouge">.d-none .d-xl-block</code></td>
+              </tr>
+            </tbody>
+          </table>    
+  </body>
+</html>
