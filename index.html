@@ -31,6 +31,8 @@
 		}
 		#Layout_brand{
 			padding: 0 15px;
+			max-height: 100vh;
+			overflow-y: scroll;
 		}
 		#Layout_brand > .navbar-brand{
 			min-width: 200px;
@@ -58,6 +60,7 @@
 			position: fixed;
 			background: #4e4e4e;
 			background: #e1e1e1;
+			background: #343a40eb;
 			width: 230px;
 			top: 40px;
 			bottom: 0px;
@@ -66,14 +69,17 @@
 
 		
 		#wrapper .MySideBar .nav-link{
+			border-radius:0px;
 			white-space: nowrap;
+			color:white;
 		}
 		
 		#wrapper .MySideBar .nav-link.active{
-			border-radius:0px;
+			background-color: #2d3646;
 		}
 		#wrapper .MySideBar .nav-link:hover{
 			font-weight:bold;
+			background-color: #2d3646;
 		}
 
 		#wrapper .MySideBar .nav-link i{
@@ -155,6 +161,10 @@
 			#wrapper.MiniSideBar .MySideBar {
 				width: 100%;
 			}
+			#wrapper .MySideBar .nav-link{
+				padding-left:0px;
+			}
+
 			#wrapper .MyMainContent{
 				padding-left: 0px;
 			}
@@ -525,8 +535,6 @@
 				</form>
 				</li>
 			</ul>
-
-
 
           </div>
 		  
