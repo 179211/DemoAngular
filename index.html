@@ -32,7 +32,6 @@
 		#Layout_brand{
 			padding: 0 15px;
 			max-height: 100vh;
-			overflow-y: scroll;
 		}
 		#Layout_brand > .navbar-brand{
 			min-width: 200px;
@@ -56,7 +55,7 @@
 
 		#wrapper .MySideBar{
 			transition: all 0.6s ease;
-			overflow: hidden;
+			overflow: hidden auto;
 			position: fixed;
 			background: #4e4e4e;
 			background: #e1e1e1;
@@ -74,12 +73,23 @@
 			color:white;
 		}
 		
+		#wrapper .MySideBar .nav-link.active::before{
+			content: ' ';
+			position: absolute;
+			right: 0px;
+			border-left: 10px solid transparent;
+			border-right: 10px solid #f7f7f7;
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			margin-top: 5px;
+			display:none;
+		}
+		
 		#wrapper .MySideBar .nav-link.active{
-			background-color: #2d3646;
+			background-color: #5d5d5d;
 		}
 		#wrapper .MySideBar .nav-link:hover{
-			font-weight:bold;
-			background-color: #2d3646;
+			background-color: #525252;
 		}
 
 		#wrapper .MySideBar .nav-link i{
@@ -97,7 +107,7 @@
 		#wrapper .MyMainContent{
 			transition: padding-left 0.6s ease;
 			min-height: 100%;
-			padding: 40px 15px 15px 230px;
+			padding: 70px 15px 15px 245px;
 		}
     </style>
 	<style>
@@ -132,7 +142,7 @@
 				transform: translate3d(25px,0,0);
 			}
 			#wrapper.MiniSideBar .MyMainContent{
-				padding-left: 50px;
+				padding-left: 65px;
 			}
 			
 		}
@@ -143,6 +153,9 @@
 				transform: scale(1.5,1.5);
 			}
 		
+			#Layout_brand{
+				overflow-y: auto;
+			}
 			#Layout_brand > .navbar-brand i:after{
 				display:none;
 			}
@@ -166,7 +179,7 @@
 			}
 
 			#wrapper .MyMainContent{
-				padding-left: 0px;
+				padding-left: 15px;
 			}
 		}
 	
@@ -577,42 +590,328 @@
 		  
         </nav>
         
-
-        <div class="MySideBar d-none" >
-            <ul class="nav nav-pills flex-column" id="navbar-example2" >
-                <li class="nav-item">
-                  <a class="nav-link" href="#Navbar1">
-                      <i class="fa fa-home"></i>
-                      <span>Navbar 1</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#Navbar2">
-                      <i class="fa fa-home"></i>
-                      <span>Navbar 2</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#Navbar3">
-                      <i class="fa fa-home"></i>
-                      <span>Navbar 3</span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#Navbar4">
-                      <i class="fa fa-home"></i>
-                      <span>Navbar 4</span>
-                  </a>
-                </li>
-              </ul>
-        </div>
         
 		<div class="MyMainContent" >
+
+
 
 
 		<div id="NavbarHome" class="AnchorNavLink"></div>
           <div class="container-fluid" >
 		  
+https://themes.getbootstrap.com/preview/?theme_id=19799&show_new=
+
+		  
+<style>
+.card{
+    box-shadow: 0 7px 14px 0 rgba(59,65,94,.1), 0 3px 6px 0 rgba(0,0,0,.07);
+    background-color: white;
+	margin-bottom:30px;
+}
+.card > .card-header{
+	border:none;
+}
+.card > CardBody{
+}
+.card > CardFooter{
+}
+</style>
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+	  <div class="card-header">
+        <h5>Special title treatment</h5>
+	  </div>
+      <div class="card-body border-top">
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+	  <div class="card-header">
+        <h5>Special title treatment</h5>
+	  </div>
+      <div class="card-body border-top">
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+	  <div class="card-header">
+        <h5>Special title treatment</h5>
+	  </div>
+      <div class="card-body border-top">
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+	  <div class="card-header bg-light">
+        <h5>Special title treatment</h5>
+	  </div>
+      <div class="card-body">
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+	  <div class="card-header">
+        <h5>Special title treatment</h5>
+	  </div>
+      <div class="card-body border-top">
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+		  
+		  
+<style>
+.TimeLine{
+	list-style-type: none;
+	position: relative;
+}
+.TimeLine:before {
+    content: ' ';
+    background: #dee2e6;
+    display: inline-block;
+    position: absolute;
+    left: 9px;
+    width: 2px;
+    height: 100%;
+    z-index: 1;
+}
+.TimeLine > .TimeLine-item {
+}
+.TimeLine > .TimeLine-item:before {
+    content: ' ';
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #47BAC1;
+    left: -2px;
+    width: 25px;
+    height: 25px;
+    z-index: 1;
+}
+</style>
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="TimeLine">
+						<li class="TimeLine-item">
+							<strong><i class="fa fa-phone"></i> <i class="fa fa-trophy"></i> <i class="fa fa-copyright"></i> Ohat with Carl and Ashley</strong>
+							<span class="float-right text-muted text-sm">30m ago</span>
+							<p>Tip tip barsa paani. Paani ne aag lagayi. Aag lagi dil mein toh Dil ko teri yaad aayi. Teri yaad aayi toh Jal utha mera bheega badan. Ab tum hi batao sajan main kya karoon. </p>
+						</li>
+						<li class="TimeLine-item">
+							<strong><i class="fa fa-medal"></i>The big launch</strong>
+							<span class="float-right text-muted text-sm">2h ago</span>
+							<p>Naam tera mere labon par aaya tha. Naam tera mere labon par aaya tha. Ho maine bahane se tumhe bulaya tha. Jhoomkar aa gaya saavan main kya karoon.</p>
+						</li>
+						<li class="TimeLine-item">
+						
+							<strong><i class="fa fa-map-marker-alt"></i> Coffee break</strong>
+							<span class="float-right text-muted text-sm">3h ago</span>
+							<p class="mb-0">Dooba dariya mein, khada main saahil par. Dooba dariya mein, khada main saahil par. Tu bijli bankar giri mere dil par, Chali aisi yeh paagal pavan main kya karoon.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		  
+
+<style>
+.TimeLineWithIcon{
+	list-style-type: none;
+	position: relative;
+}
+.TimeLineWithIcon:before {
+    content: ' ';
+    background: #dee2e6;
+    display: inline-block;
+    position: absolute;
+    left: 9px;
+    width: 2px;
+    z-index: 1;
+    top: 15px;
+    bottom: 0px;
+}
+.TimeLineWithIcon > .TimeLine-item {
+	position: relative;
+}
+.TimeLineWithIcon > .TimeLine-item > i {
+    position: absolute;
+    left: -42px;
+    top: 3px;
+    background: white;
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    line-height: 20px;
+    font-size: 14px;
+    padding-left: 3px;
+    border: 2px solid;
+    background: #e0e0e0;
+	border-color: #e0e0e0;
+}
+.TimeLineWithIcon.WithBorder > .TimeLine-item > i {
+    background: white;
+	border-color: #47bac1;
+}
+</style>
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="TimeLineWithIcon WithBorder2">
+						<li class="TimeLine-item">
+							<i class="fa fa-university"></i>
+							<strong>Ohat with Carl and Ashley</strong>
+							<span class="float-right text-muted text-sm">30m ago</span>
+							<p>Tip tip barsa paani. Paani ne aag lagayi. Aag lagi dil mein toh Dil ko teri yaad aayi. Teri yaad aayi toh Jal utha mera bheega badan. Ab tum hi batao sajan main kya karoon. </p>
+						</li>
+						<li class="TimeLine-item">
+							<i class="fa fa-graduation-cap"></i>
+							<strong>The big launch</strong>
+							<span class="float-right text-muted text-sm">2h ago</span>
+							<p>Naam tera mere labon par aaya tha. Naam tera mere labon par aaya tha. Ho maine bahane se tumhe bulaya tha. Jhoomkar aa gaya saavan main kya karoon.</p>
+						</li>
+						<li class="TimeLine-item">
+							<i class="fa fa-calendar-alt"></i>
+							<strong>Coffee break</strong>
+							<span class="float-right text-muted text-sm">3h ago</span>
+							<p class="mb-0">Dooba dariya mein, khada main saahil par. Dooba dariya mein, khada main saahil par. Tu bijli bankar giri mere dil par, Chali aisi yeh paagal pavan main kya karoon.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+
+<style>
+.TimeLineWithIconV2{
+	list-style-type: none;
+	position: relative;
+}
+.TimeLineWithIconV2:before {
+    content: ' ';
+    background: #dee2e6;
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 3px;
+    z-index: 1;
+    top: 15px;
+    bottom: 0px;
+}
+.TimeLineWithIconV2 > .TimeLine-item {
+	position: relative;
+}
+.TimeLineWithIconV2 > .TimeLine-item > i {
+	position: absolute;
+    left: -48px;
+    top: -5px;
+    background: white;
+    display: inline-block;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    z-index: 1;
+    line-height: 27px;
+    font-size: 17px;
+    padding-left: 6px;
+    border: 4px solid;
+	background: white;
+	border-color: white;
+}
+</style>
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="TimeLineWithIconV2">
+						<li class="TimeLine-item">
+							<i class="fa fa-university" style="background-color:#d2f4f1; color: #1dc9b7;"></i>
+							<strong>Ohat with Carl and Ashley</strong>
+							<span class="float-right text-muted text-sm">30m ago</span>
+							<p>Tip tip barsa paani. Paani ne aag lagayi. Aag lagi dil mein toh Dil ko teri yaad aayi. Teri yaad aayi toh Jal utha mera bheega badan. Ab tum hi batao sajan main kya karoon. </p>
+						</li>
+						<li class="TimeLine-item">
+							<i class="fa fa-graduation-cap" style="background-color:#ffd7e4; color: #fd397a;"></i>
+							<strong>The big launch</strong>
+							<span class="float-right text-muted text-sm">2h ago</span>
+							<p>Naam tera mere labon par aaya tha. Naam tera mere labon par aaya tha. Ho maine bahane se tumhe bulaya tha. Jhoomkar aa gaya saavan main kya karoon.</p>
+						</li>
+						<li class="TimeLine-item">
+							<i class="fa fa-calendar-alt" style="background-color:#dfe4ff; color: #5d78ff;"></i>
+							<strong>Coffee break</strong>
+							<span class="float-right text-muted text-sm">3h ago</span>
+							<p class="mb-0">Dooba dariya mein, khada main saahil par. Dooba dariya mein, khada main saahil par. Tu bijli bankar giri mere dil par, Chali aisi yeh paagal pavan main kya karoon.</p>
+						</li>
+						<li class="TimeLine-item">
+							<i class="fa fa-calendar-alt" style="background-color:#fff1d3; color: #ffb822;"></i>
+							<strong>Coffee break</strong>
+							<span class="float-right text-muted text-sm">3h ago</span>
+							<p class="mb-0">Dooba dariya mein, khada main saahil par. Dooba dariya mein, khada main saahil par. Tu bijli bankar giri mere dil par, Chali aisi yeh paagal pavan main kya karoon.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+
+
 			<div class="row">
 				<div class="col-md-12">
 					<div class="DivWelcome">
