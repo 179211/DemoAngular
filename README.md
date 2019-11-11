@@ -23,3 +23,4 @@ Configure installed Bootstrap & JQuery in an angular.json file:
   { "input": "src/external-module/main.js", "inject": false, "bundleName": "external-module" }
 ]
 
+https://www.javaguides.net/2019/06/angular-8-crud-example-tutorial.html
